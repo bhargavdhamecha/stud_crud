@@ -1,0 +1,30 @@
+<h2 mat-dialog-title>
+  Add Student
+  <button style="float: right;" mat-button mat-dialog-close> X</button>
+</h2>
+<mat-dialog-content [formGroup]="studentData">
+  <table>
+    <tr>
+      <td><span>roll_id: </span></td>
+      <td><input name="roll_id" id="id_roll_id" formControlName="roll_id"></td>
+    </tr>
+    <tr>
+      <td><span>Name</span></td>
+      <td><input name="name" id="id_name" formControlName="name" autocomplete="off"></td>
+    </tr>
+    <tr>
+      <td><span>Age</span></td>
+      <td><input name="age" id="id_age" formControlName="age"></td>
+    </tr>
+    <tr>
+      <td><span>Stream</span></td>
+      <td><input name="stream" is="id_stream" formControlName="stream"></td>
+    </tr>
+  </table>    
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button mat-dialog-close>close</button>
+    <button type="submit" mat-button [mat-dialog-close]="true" (click)="onSave()">{{isUpdate ? "update" : "save"}}</button>
+  </mat-dialog-actions>
+
+  

@@ -1,0 +1,8 @@
+.center{
+    text-align: center;
+}
+
+.float-right{
+    float: inline-end;
+    margin-right: 7rem;
+}
